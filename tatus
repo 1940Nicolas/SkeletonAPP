@@ -1,0 +1,15 @@
+[33mcommit a6edf033c6cb55d283ec1ce70c1f7019f352fa12[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: 1940Nicolas <nicolascarlosvf@gmail.com>
+Date:   Sun May 25 18:29:38 2025 -0400
+
+    Primer commit - Subiendo SkeletonAPP
+
+angular.json
+src/app/app-routing.module.ts
+src/app/home/home.page.html
+src/app/login/login-routing.module.ts
+src/app/login/login.module.ts
+src/app/login/login.page.html
+src/app/login/login.page.scss
+src/app/login/login.page.spec.ts
+src/app/login/login.page.ts
