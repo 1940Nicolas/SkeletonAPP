@@ -1,33 +1,66 @@
-<ion-menu contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">
-    Este es el contenido del menú.
-  </ion-content>
-</ion-menu>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      SkeletonAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<!-- Contenedor principal de la página -->
-<div class="ion-page" id="main-content">
-  <ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Menu</ion-title>
+      <ion-title size="large">Hola</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    Toque el botón en la barra de herramientas para abrir el menú..
-    <div id="container">
-      <!--<strong>Ready to create an app?</strong>
-      <p>Start with Ionic 
-        <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">
-          UI Components
-        </a>
-      </p>-->
-    </div>
-  </ion-content>
-</div>
+
+  <div id="container" class="cuerpo_page">
+    <ion-card>
+
+      <ion-card-title>
+        <h3>Informacion Adicional</h3>
+        <p>Usuario: {{ usuarioRecibido }}</p>
+      </ion-card-title>
+
+      <ion-card-content>
+
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nivel de Educacion</ion-label>
+        <ion-select [(ngModel)]="selectedOption">
+          <ion-select-option value="option1">Universitario</ion-select-option>
+          <ion-select-option value="option2">Magister</ion-select-option>
+          <ion-select-option value="option3">Doctorado</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Fecha Nacimiento</ion-label>
+        <ion-item>
+
+           <mat-form-field>
+            <mat-label>Fecha Nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker> 
+          </mat-form-field> 
+
+        </ion-item>
+      </ion-item>
+
+      </ion-card-content>
+
+        <ion-button (click)="limpiar()">Limpiar</ion-button>
+        <ion-button (click)="mostrar()">Mostrar</ion-button>
+
+    </ion-card>
+  </div>
+</ion-content>
